@@ -6,6 +6,9 @@
       <br> An algorithm which determines whether a given number is prime
     </p>
     <h3>Input Your Big Integer</h3>
+    <p>
+      <small><a href="https://primes.utm.edu/lists/small/small3.html" title="List of prime numbers" target="_blank">Get List of prime numbers ➢</a></small>
+    </p>
     <br>
     <textarea @keydown="resetResult" v-model="bigNumber" placeholder="Enter your number"></textarea>
 
@@ -23,7 +26,7 @@
     </p>
 
     <footer>
-      <h4>Credit to Libraries</h4>
+      <h3>Credits</h3>
       <ul>
         <li><a href="https://github.com/peterolson/BigInteger.js" target="_blank" rel="noopener">BigInteger.js</a></li>
       </ul>
@@ -51,6 +54,7 @@ export default {
     },
     checkPrime: function() {
       try {
+        this.bigNumber = this.bigNumber.trim()
         this.isPrimeNumber = bigInt(this.bigNumber).isProbablePrime()
       } catch(e) {
         this.isPrimeNumber = null
@@ -111,10 +115,16 @@ a {
 .error {
   color: red;
 }
+textarea:active, textarea:focus, textarea:hover{
+  outline:0px !important;
+  -webkit-appearance:none;
+  border: 3px solid #bab6b6;
+}
 textarea {
-  border: 2px solid lightgray;
+  padding:10px;
+  border: 3px solid lightgray;
   border-radius: 4px;
-  min-height: 100px;
-  min-width: 300px;
+  min-height: 150px;
+  min-width: 350px;
 }
 </style>
