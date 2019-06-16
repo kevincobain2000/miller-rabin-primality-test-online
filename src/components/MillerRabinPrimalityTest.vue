@@ -138,6 +138,6 @@ textarea {
   border: 3px solid lightgray;
   border-radius: 4px;
   min-height: 150px;
-  min-width: 350px;
+  min-width: 300px;
 }
 </style>
